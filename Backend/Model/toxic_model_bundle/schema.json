@@ -1,0 +1,6 @@
+{
+  "required_columns": [
+    "comment_text"
+  ],
+  "target": "toxic"
+}
