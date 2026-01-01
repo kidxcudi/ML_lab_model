@@ -157,7 +157,6 @@ body {
 .shortcut-hint {
   display: flex;
   align-items: center;
-  align-self: flex-end;
   gap: 10px;
   color: #a0aec0;
   font-size: 14px;
@@ -167,9 +166,19 @@ body {
   width: fit-content;
 }
 
+/* Action Buttons - Desktop order: Analyze | Clear */
 .action-buttons {
   display: flex;
   gap: 15px;
+  flex-direction: row; /* Default desktop: row */
+}
+
+/* Desktop: Keep natural order (Clear | Analyze) but we'll reverse visually */
+@media (min-width: 769px) {
+  .action-buttons {
+    flex-direction: row-reverse; /* This visually reverses: Analyze | Clear */
+    justify-content: flex-start; /* Align to left */
+  }
 }
 
 .clear-btn, .analyze-btn {
@@ -538,6 +547,7 @@ body {
     width: 100%;
   }
   
+  /* MOBILE: Natural order - Analyze first, Clear second */
   .action-buttons {
     flex-direction: column;
   }
