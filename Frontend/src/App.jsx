@@ -99,15 +99,6 @@ const App = () => {
                 </div>
 
                 <div className="action-buttons">
-                  <button 
-                    className="clear-btn"
-                    onClick={handleClear} // Now this works!
-                    disabled={loading || (!comment.trim() && !result)}
-                  >
-                    <span className="btn-icon">🗑️</span>
-                    Clear
-                  </button>
-
                   <button
                     className={`analyze-btn ${loading ? "loading" : ""}`}
                     onClick={predict}
@@ -124,6 +115,15 @@ const App = () => {
                       </>
                     )}
                   </button>
+                  <button 
+                    className="clear-btn"
+                    onClick={handleClear} // Now this works!
+                    disabled={loading || (!comment.trim() && !result)}
+                  >
+                    <span className="btn-icon">🗑️</span>
+                    Clear
+                  </button>
+
                 </div>
               </div>
             </div>

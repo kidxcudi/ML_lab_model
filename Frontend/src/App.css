@@ -166,19 +166,9 @@ body {
   width: fit-content;
 }
 
-/* Action Buttons - Desktop order: Analyze | Clear */
 .action-buttons {
   display: flex;
   gap: 15px;
-  flex-direction: row; /* Default desktop: row */
-}
-
-/* Desktop: Keep natural order (Clear | Analyze) but we'll reverse visually */
-@media (min-width: 769px) {
-  .action-buttons {
-    flex-direction: row-reverse; /* This visually reverses: Analyze | Clear */
-    justify-content: flex-start; /* Align to left */
-  }
 }
 
 .clear-btn, .analyze-btn {
@@ -402,26 +392,6 @@ body {
   color: #4ade80;
 }
 
-.confidence-meter {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.meter-bar {
-  flex: 1;
-  height: 6px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 3px;
-  overflow: hidden;
-}
-
-.meter-fill {
-  height: 100%;
-  border-radius: 3px;
-  transition: width 1s ease-out;
-}
-
 .toxic-fill {
   background: linear-gradient(90deg, #dc2626, #ef4444);
 }
@@ -547,7 +517,6 @@ body {
     width: 100%;
   }
   
-  /* MOBILE: Natural order - Analyze first, Clear second */
   .action-buttons {
     flex-direction: column;
   }
