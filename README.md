@@ -1,7 +1,7 @@
 # ML_lab_model
 ---
 # 💬 Toxic Speech Detection
-
+### Deployed app: https://toxic-speech-detector.vercel.app/
 **Toxic Speech Detection** is an AI-powered web application that classifies text messages as **toxic** or **non-toxic** using a **Logistic Regression** machine learning model. It provides real-time analysis with probabilities and highlights the likelihood of toxic content.
 
 ---
